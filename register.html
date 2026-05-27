@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoBus | Register</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <main class="auth-page">
+      <section class="auth-card">
+        <h1 class="auth-title">Welcome to GoBus!</h1>
+        <p class="auth-subtitle">Create an account</p>
+
+        <form id="register-form" class="auth-form">
+          <div class="field-group">
+            <label class="field-label" for="reg-name">Full name</label>
+            <input
+              id="reg-name"
+              class="field-input"
+              type="text"
+              placeholder="Your name"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="reg-email">Email</label>
+            <input
+              id="reg-email"
+              class="field-input"
+              type="email"
+              placeholder="Enter your email"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="reg-password">Password</label>
+            <input
+              id="reg-password"
+              class="field-input"
+              type="password"
+              placeholder="At least 6 characters"
+              required
+              minlength="6"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="reg-password-confirm">
+              Confirm Password
+            </label>
+            <input
+              id="reg-password-confirm"
+              class="field-input"
+              type="password"
+              placeholder="Re-enter your password"
+              required
+              minlength="6"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary full-width">
+            Register
+          </button>
+        </form>
+
+        <p class="auth-switch">
+          Already have an account?
+          <a href="login.html">Login here.</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      (function () {
+        if (window.emailjs) {
+
+        // again, put your emailjs public key here, Cody.
+
+          emailjs.init("");
+        }
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="supabaseClient.js"></script>
+    <script src="gobusAuth.js"></script>
+    <script src="auth.js"></script>
+  </body>
+</html>
